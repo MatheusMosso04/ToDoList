@@ -1,0 +1,4 @@
+Toda classe em Java precisa estar dentro de um pacote.
+Por exemplo a classe TodolistApplication está dentro do pacote br.com.matheusmosso.todolist
+Isso serve para toda clase. Linha original sendo package br.com.matheusmosso.todolist;
+
