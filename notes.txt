@@ -2,3 +2,15 @@ Toda classe em Java precisa estar dentro de um pacote.
 Por exemplo a classe TodolistApplication está dentro do pacote br.com.matheusmosso.todolist
 Isso serve para toda clase. Linha original sendo package br.com.matheusmosso.todolist;
 
+Controller é quem recebe a requisição do usuário, ela faria a conexão entre a requisição do usuário as demais rotas, ex database
+Controller precisa estar dentro da estrutura da main, pois o Spring irá verificar na main se há outras pastas como Controller, Services e repositories, por conta disso é necessário
+que essas pastas estejam dentro da pasta que está o main, nesse projeto seria a todolist
+
+Rest é um estilo de arquitetura, conjunto de restrições que padronizam a comunicação na web afim de ser leve e escalável
+
+
+Get e set: 
+
+Get é utilizado quando se deseja recuperar uma informação apontando para um atributo
+
+Set é utilizado para atualizar ou inserir informações para um atributo em específico
