@@ -14,3 +14,10 @@ Get e set:
 Get é utilizado quando se deseja recuperar uma informação apontando para um atributo
 
 Set é utilizado para atualizar ou inserir informações para um atributo em específico
+
+Para não ser necessário ficar criando todos os Get e Set dos atributos que desejamos, foi utilizado o Lombok que seria um lib do java que já realizaria esses Get e Set.
+Utilizando o @Data no model, ele já realizaria para os atributos que possui no mesmo, caso fosse desejado apenas os Gets seria @Get ou set @Set.
+
+Spring Data JPA - ORM responsável por fazer o sistema se comunicar com o banco de dados, basicamente converte a linguagem para uma linguagem que o DB entenda.
+
+H2 DataBase, banco utilizado, banco com base em memória, caso a aplicação seja reiniciada os dados serão perdidos.
