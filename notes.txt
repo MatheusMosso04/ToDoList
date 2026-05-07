@@ -21,3 +21,5 @@ Utilizando o @Data no model, ele já realizaria para os atributos que possui no 
 Spring Data JPA - ORM responsável por fazer o sistema se comunicar com o banco de dados, basicamente converte a linguagem para uma linguagem que o DB entenda.
 
 H2 DataBase, banco utilizado, banco com base em memória, caso a aplicação seja reiniciada os dados serão perdidos.
+
+pom.xml - Coloco possíveis dependências que a aplicação necessite para agilizar trabalhos. Ex: Dependeby bcript para criptografia de senha
