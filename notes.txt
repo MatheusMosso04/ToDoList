@@ -23,3 +23,27 @@ Spring Data JPA - ORM responsável por fazer o sistema se comunicar com o banco 
 H2 DataBase, banco utilizado, banco com base em memória, caso a aplicação seja reiniciada os dados serão perdidos.
 
 pom.xml - Coloco possíveis dependências que a aplicação necessite para agilizar trabalhos. Ex: Dependeby bcript para criptografia de senha
+
+No FilterTask ele recebe alguns parametros como o request, response e chain, o request sendo a requisição do usuário, o response é o que é retornado ao usuário 
+Ex: uma mensagem de token inválido caso a senha esteja incorreta ou usuário, e o chain seria o que daria sequencia para outras rotas (para controller nesse caso),
+isso ocorre apenas se a requisição passar pela autenticação anterior.
+
+A seguir, possível filtro que pode ser utilizado (ServLet):
+
+//Filtro para realizar a autenticação de usuário, sendo verificado se o username e a senha estão corretos e cadastrados no DB, caso estejam a tarefa do usuário é cadastrado
+@Component //Anotação necessária para que o springBoot gerencie essa classe
+public class FilterTaskAuth implements Filter {
+
+    @Override
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+            throws IOException, ServletException {
+        
+            //Executar alguma ação
+            System.out.println("Chegou no filtro");
+            chain.doFilter(request, response);
+    }
+    
+}
+
+*Obs: Esse filtro pode ser utiizado na aplicação porém utiliza parâmetros do tipo Servlet e não HttpServlet, por se tratar de uma api via HHTP e Rest é melhor utilizar o filtro que
+possui no springBoot pois não é necessário realizar a conversão para o HttpServlet.
